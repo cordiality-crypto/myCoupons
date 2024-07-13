@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+</head>
+<body class="flex flex-col flex-wrap justify-between min-h-screen">
+    <nav class="fixed top-0 z-50 w-full bg-gradient-to-r from-teal-950 to-cyan-950 shadow-2xl rounded-b-lg">
+        <div class="px-3 py-3 lg:px-5 lg:pl-3">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center justify-start rtl:justify-end">
+                    <button id="sidebarToggle" data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar" aria-controls="logo-sidebar" type="button" class="inline-flex items-center p-2 text-sm text-teal-900 rounded-lg sm:hidden hover:bg-teal-900 focus:outline-none focus:ring-2 focus:ring-teal-950">
+                        <span class="sr-only">Open sidebar</span>
+                        <img src="img/side-bar.svg" class="h-7">
+                    </button>
+                    <a href="index.html" class="flex ms-1.5 md:me-24">
+                        <img src="img/logo.svg" class="h-10 me-3 p-0" alt="myCoupons Logo" />
+                        <span class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap text-orange-400">myCoupons</span>
+                    </a>
+                </div>
+    
+                <div class="flex items-center">
+                    <div class="flex items-center ms-3">
+                        <div>
+                            <button id="userMenuToggle" type="button" class="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" aria-expanded="false" data-dropdown-toggle="dropdown-user">
+                                <span class="sr-only">Open user menu</span>
+                                <img class="w-8 h-8 rounded-full" src="img/person.svg" alt="user photo">
+                            </button>
+                        </div>
+                        <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow dark:bg-gray-700 dark:divide-gray-600" id="dropdown-user">
+                            <div class="px-4 py-3" role="none">
+                                <p class="text-sm text-gray-900 dark:text-white" role="none">Elliot Alderson</p>
+                                <p class="text-sm font-medium text-gray-900 truncate dark:text-gray-300" role="none">fsociety@ecorp.com</p>
+                            </div>
+                            <ul class="py-1" role="none">
+                                <li><a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">Earnings</a></li>
+                                <li><a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">Sign out</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <aside id="logo-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700" aria-label="Sidebar">
+        <div class="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
+            <ul class="space-y-2 font-medium">
+                <li><a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"><svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20"><path d="m17.418 3.623-.018-.008a6.713 6.713 0 0 0-2.4-.569V2h1a1 1 0 1 0 0-2h-2a1 1 0 0 0-1 1v2H9.89A6.977 6.977 0 0 1 12 8v5h-2V8A5 5 0 1 0 0 8v6a1 1 0 0 0 1 1h8v3.081a2.5 2.5 0 1 0 2 0V15h8a1 1 0 0 0 1-1V8a6.997 6.997 0 0 0-2.582-5.162ZM5.1 19a1.5 1.5 0 1 1 2.8 0H5.1ZM18 14H2V8a5 5 0 1 1 10 0v6h-1V8a3.975 3.975 0 0 0-.45-1.868 4 4 0 0 1 7.691 1.133c.165.75.259 1.538.259 2.347V14Z"/></svg><span class="flex-1 ms-3 whitespace-nowrap">Inbox</span><span class="inline-flex items-center justify-center px-2 ms-3 text-sm font-medium text-blue-800 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-300">69</span></a></li>
+                <li><a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"><svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20"><path d="m17.418 3.623-.018-.008a6.713 6.713 0 0 0-2.4-.569V2h1a1 1 0 1 0 0-2h-2a1 1 0 0 0-1 1v2H9.89A6.977 6.977 0 0 1 12 8v5h-2V8A5 5 0 1 0 0 8v6a1 1 0 0 0 1 1h8v3.081a2.5 2.5 0 1 0 2 0V15h8a1 1 0 0 0 1-1V8a6.997 6.997 0 0 0-2.582-5.162ZM5.1 19a1.5 1.5 0 1 1 2.8 0H5.1ZM18 14H2V8a5 5 0 1 1 10 0v6h-1V8a3.975 3.975 0 0 0-.45-1.868 4 4 0 0 1 7.691 1.133c.165.75.259 1.538.259 2.347V14Z"/></svg><span class="flex-1 ms-3 whitespace-nowrap">Users</span></a></li>
+                <li><a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"><svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20"><path d="M15 12h2v6H1v-6h2v4h12v-4ZM9 .5 0 5v2h18V5L9 .5Z"/></svg><span class="flex-1 ms-3 whitespace-nowrap">Products</span></a></li>
+                <li><a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"><svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20"><path d="M15 12h2v6H1v-6h2v4h12v-4ZM9 .5 0 5v2h18V5L9 .5Z"/></svg><span class="flex-1 ms-3 whitespace-nowrap">Sign In</span></a></li>
+                <li><a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"><svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20"><path d="M15 12h2v6H1v-6h2v4h12v-4ZM9 .5 0 5v2h18V5L9 .5Z"/></svg><span class="flex-1 ms-3 whitespace-nowrap">Sign Up</span></a></li>
+            </ul>
+        </div>
+    </aside> 
+
+    <div>
+
+    </div>
+    
+
+    <footer class="bg-white rounded-t-md shadow m-0 dark:bg-gray-800 bottom-0">
+        <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="#" class="hover:underline">Herzlichkeit</a>. All Rights Reserved.
+        </span>
+        <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+            <li>
+                <a href="#" class="hover:underline me-4 md:me-6">About</a>
+            </li>
+            <li>
+                <a href="#" class="hover:underline me-4 md:me-6">Privacy Policy</a>
+            </li>
+            <li>
+                <a href="#" class="hover:underline me-4 md:me-6">Licensing</a>
+            </li>
+            <li>
+                <a href="#" class="hover:underline">Contact</a>
+            </li>
+        </ul>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
